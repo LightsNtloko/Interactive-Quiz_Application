@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ quiz.title }}</h2>
+<form method="POST" action="{{ url_for('quiz', quiz_id=quiz.id) }}">
+    {% for question_id, question_data in quiz.questions.items() %}
+        <fieldset>
+            <legend>{{ question_data['question'] }}</legend>
+            {% for option in question_data['options'] %}
+                <input type="radio" name="{{ question_id }}" value="{{ option }}" required> {{ option }}<br>
+            {% endfor %}
+        </fieldset>
+    {% endfor %}
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
