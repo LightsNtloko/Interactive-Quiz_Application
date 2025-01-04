@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
+from models import User, Quiz, QuizResult
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -70,6 +71,10 @@ def logout():
     logout_user()
     flash('You have been logged out.', 'info')
     return redirect(url_for('login'))
+
+@app.route('/')
+def home():
+    return render_template('landing-page_index.html')
 
 # Dashboard route
 @app.route('/dashboard')
