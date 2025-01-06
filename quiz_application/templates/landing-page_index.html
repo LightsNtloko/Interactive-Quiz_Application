@@ -25,9 +25,9 @@
             color: #f0ad4e;
         }
         .intro {
-            background-image: url('{{ url_for('static', filename='images/quiz_intro.jpg') }}');
+            background-image: url('{{ url_for('static', filename='images/background.png') }}');
             background-size: cover;
-            color: white;
+            color: black;
             text-align: center;
             padding: 150px 0;
         }
@@ -76,7 +76,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Topics">Topics</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="/signup">Sign Up</a></li>
@@ -87,7 +87,7 @@
     </nav>
 
     <!-- Intro Section -->
-    <section class="intro">
+    <section class="intro" styles="background-image: url('{{ url_for('static', filename='images/background.png') }}');">
         <div class="container">
             <h1>Challenge Yourself with the Ultimate Quiz Experience</h1>
             <p>Explore a variety of quizzes, test your knowledge, and track your progress!</p>
@@ -96,24 +96,24 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="features">
+    <section id="topics" class="topics">
         <div class="container">
-            <h2 class="text-center mb-5">Key Features</h2>
+            <h2 class="text-center mb-5">TOPICS</h2>
             <div class="row">
-                <div class="col-md-4 feature">
-                    <img src="{{ url_for('static', filename='images/real_time.jpg') }}" alt="Feature 1">
-                    <h4>Wide Range of Quizzes</h4>
-                    <p>Explore quizzes across various topics and difficulty levels.</p>
+                <div class="col-md-4 topic">
+                    <img src="{{ url_for('static', filename='images/python.png') }}" alt="Topic 1">
+                    <h4>Python</h4>
+                    <p>Explore and take quizzes about various python topics with prefered difficulty levels.</p>
+                </div>
+                <div class="col-md-4 topic">
+                    <img src="{{ url_for('static', filename='images/JS.png') }}" alt="Topic 2">
+                    <h4>JavaScript</h4>
+                    <p>Explore and take quizzes about various JS topics with prefered difficulty levels.</p>
                 </div>
                 <div class="col-md-4 feature">
-                    <img src="{{ url_for('static', filename='images/custom_reports.jpg') }}" alt="Feature 2">
-                    <h4>Personalized Results</h4>
-                    <p>Track your progress with detailed result analytics.</p>
-                </div>
-                <div class="col-md-4 feature">
-                    <img src="{{ url_for('static', filename='images/ai_insights.jpg') }}" alt="Feature 3">
-                    <h4>Interactive and Fun</h4>
-                    <p>Enjoy an engaging and user-friendly quiz experience.</p>
+                    <img src="{{ url_for('static', filename='images/C.png') }}" alt="Topic 3">
+                    <h4>C programming</h4>
+                    <p>Explore and take quizzes about various C programming topics with prefered difficulty levels.</p>
                 </div>
             </div>
         </div>
@@ -126,7 +126,7 @@
             <p>The Interactive Quiz Application is designed to make learning and self-assessment fun and effective. Whether you’re a student, professional, or trivia enthusiast, this app offers something for everyone.</p>
             <p>It is part of a portfolio project showcasing my full-stack development skills, and I am thrilled to share it with the world.</p>
             <div class="text-center mt-4">
-                <a href="https://github.com/LightsNtloko" class="btn btn-secondary">View on GitHub</a>
+                <a href="https://github.com/LightsNtloko/Interactive-Quiz_Application" class="btn btn-secondary">View on GitHub</a>
             </div>
         </div>
     </section>
