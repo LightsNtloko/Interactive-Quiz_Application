@@ -107,6 +107,18 @@ def attempt_quiz(quiz_id):
         return redirect(url_for('dashboard'))
 
     return render_template('attempt_quiz.html', quiz_id=quiz_id)
+# Topic routes
+@app.route('/python')
+def python_page():
+    return render_template('python.html', title="Python")
+
+@app.route('/javascript')
+def javascript_page():
+    return render_template('javascript.html', title="JavaScript")
+
+@app.route('/c')
+def c_page():
+    return render_template('c.html', title="C Programming")
 
 # Main function to run the app
 if __name__ == '__main__':
